@@ -1,0 +1,64 @@
+<html>
+    <head>
+    
+        <script type="text/javascript">
+         
+
+function DHTMLSound() {
+  
+    var strings= new Array();
+            strings[0]="English.wav";
+                strings[1]="Japanese.wav";
+                 strings[2]="Spanish.wav";
+                strings[3]="Swedish.wav";
+                 strings[4]="Finnish.wav";
+                strings[5]="French.wav";
+                 strings[6]="Italian.wav";
+                strings[7]="Thai.wav";
+                 strings[8]="Russian.wav";
+                strings[9]="icelandic.wav";
+     var x=(Math.random()*10);
+           
+            if(x<=1)
+           surl =strings[0];
+           if(x<=2 && x>1)
+           surl =strings[1];
+           if(x<=3 && x>2)
+          surl =strings[2];
+           if(x<=4 && x>3)
+          surl =strings[3];
+           if(x<=5 && x>4)
+          surl=strings[4];
+           if(x<=6 && x>5)
+          surl =strings[5];
+           if(x<=7 && x>6)
+          surl =strings[6];
+           if(x<=8 && x>7)
+           surl =strings[7];
+           if(x<=9 && x>8)
+          surl =strings[8];
+           if(x<=10 && x>9)
+           surl =strings[9];
+          
+  document.getElementById("dummyspan").innerHTML=
+    "<embed src='"+surl+"' hidden=true autostart=true loop=true>";
+    write(surl);
+}
+            
+    </script>
+    </head>
+    
+    <body onload="DHTMLSound()">
+    <span id="dummyspan"></span> 
+        <p> 
+               Current Language: 
+
+        </p>
+       
+<form>
+ 
+</form>
+        
+    </head>
+    </body>
+</html>
