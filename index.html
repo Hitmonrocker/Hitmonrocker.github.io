@@ -1,16 +1,24 @@
 <html>
+   
     <head>
-    
-        <script language="javascript">
-         
-function printStuff(s)
-            {
-                document.write("Current Language"+":"+s);
 
-            }
+        <script js>
+ 
+var imagesArray = [ "English.gif", "Japanese.gif", "Spanish.gif","Swedish.gif","Finnish.gif","Italian.gif","Thai.gif","Russian.gif","Icelantdic.gif"];
+
+function displayImage ()
+{
+    var num = Math.floor(Math.random() * 9);
+ document.write('<img src="'+imagesArray[num]+'" border=0>')
+ DHTMLSound()
+}
+            
 function DHTMLSound() {
-  
-    var strings= new Array();
+     var x=Math.floor((Math.random()*9));
+     
+
+
+    var strings= new Array(8);
             strings[0]="English.wav";
                 strings[1]="Japanese.wav";
                  strings[2]="Spanish.wav";
@@ -21,7 +29,7 @@ function DHTMLSound() {
                 strings[6]="Thai.wav";
                  strings[7]="Russian.wav";
                 strings[8]="icelandic.wav";
-     var x=(Math.random()*9);
+    
            var lang;
             if(x<=1)
             {
@@ -68,26 +76,26 @@ function DHTMLSound() {
           surl =strings[8];
                 lang="Icelandtic";
            }
-       
-          
-  document.getElementById("dummyspan").innerHTML=
-    "<embed src='"+surl+"' hidden=true autostart=true loop=true>";
-   printStuff(lang);
+embed = document.createElement("embed");
+embed.setAttribute("src", surl);
+embed.setAttribute("hidden", true);
+embed.setAttribute("autostart", true);
+document.body.appendChild(embed);
+    documet.write("Current Language:"+" "+lang);
+    
     
     
 }
 
     </script>
     </head>
-    
-    <body 
-          
-          onload="DHTMLSound()">
+    <body
+            onload="displayImage()"
+        
+          >
     <span id="dummyspan"></span> 
-        <p> 
-               
-
-        </p>
+        Current Language: 
+   
        
 <form>
  
