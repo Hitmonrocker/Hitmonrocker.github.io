@@ -1,9 +1,13 @@
 <html>
     <head>
     
-        <script type="text/javascript">
+        <script language="javascript">
          
+function printStuff(s)
+            {
+                document.write("Current Language"+":"+s);
 
+            }
 function DHTMLSound() {
   
     var strings= new Array();
@@ -12,46 +16,76 @@ function DHTMLSound() {
                  strings[2]="Spanish.wav";
                 strings[3]="Swedish.wav";
                  strings[4]="Finnish.wav";
-                strings[5]="French.wav";
-                 strings[6]="Italian.wav";
-                strings[7]="Thai.wav";
-                 strings[8]="Russian.wav";
-                strings[9]="icelandic.wav";
-     var x=(Math.random()*10);
-           
+               
+                 strings[5]="Italian.wav";
+                strings[6]="Thai.wav";
+                 strings[7]="Russian.wav";
+                strings[8]="icelandic.wav";
+     var x=(Math.random()*9);
+           var lang;
             if(x<=1)
+            {
            surl =strings[0];
+                lang="English"
+            }
            if(x<=2 && x>1)
+           {
            surl =strings[1];
+                 lang="Japanese";
+           }
            if(x<=3 && x>2)
+           {
           surl =strings[2];
+                 lang="Spanish";
+           }
            if(x<=4 && x>3)
+           {
           surl =strings[3];
+                lang="Swedish";
+           }
            if(x<=5 && x>4)
+           {
           surl=strings[4];
+                lang="Finnish";
+           }
            if(x<=6 && x>5)
+           {
           surl =strings[5];
+                lang="Italian";
+           }
            if(x<=7 && x>6)
+           {
           surl =strings[6];
+                lang="Thai";
+           }
            if(x<=8 && x>7)
+           {
            surl =strings[7];
+ lang="Russian";
+           }
            if(x<=9 && x>8)
+           {
           surl =strings[8];
-           if(x<=10 && x>9)
-           surl =strings[9];
+                lang="Icelandtic";
+           }
+       
           
   document.getElementById("dummyspan").innerHTML=
     "<embed src='"+surl+"' hidden=true autostart=true loop=true>";
-    write(surl);
+   printStuff(lang);
+    
+    
 }
-            
+
     </script>
     </head>
     
-    <body onload="DHTMLSound()">
+    <body 
+          
+          onload="DHTMLSound()">
     <span id="dummyspan"></span> 
         <p> 
-               Current Language: 
+               
 
         </p>
        
