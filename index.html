@@ -76,11 +76,9 @@ function DHTMLSound() {
           surl =strings[8];
                 lang="Icelandtic";
            }
-embed = document.createElement("embed");
-embed.setAttribute("src", surl);
-embed.setAttribute("hidden", true);
-embed.setAttribute("autostart", true);
-document.body.appendChild(embed);
+var snd = new Audio(surl); // buffers automatically when created
+    snd.loop=true;
+snd.play();
     documet.write("Current Language:"+" "+lang);
     
     
